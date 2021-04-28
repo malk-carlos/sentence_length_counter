@@ -11,7 +11,7 @@
 </head>
 <body>
     <h1>文字数カウンター</h1>
-    <textarea id="text"></textarea>
+    <textarea id="text" onInput="count()"></textarea>
     
     <table>
         <tr id="">
@@ -26,7 +26,7 @@
 
         <tr>
             <td>行数</td>
-            <td><input readonly type="text" size="5" id="lines" value="0"></td>
+            <td><input readonly type="text" size="5" id="lines" value="0" ></td>
         </tr>
     </table>    
 
