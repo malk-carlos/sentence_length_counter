@@ -9,6 +9,19 @@
 h1{
     margin-top: 100px;
     margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+h1:hover{
+    text-shadow: 0 0 7px #dddd;
+    transition: 0.3s;
+}
+
+.len-display{
+    background-color: #00594c;
+    color: #fff;
+    border: groove 3px #8B4720;
+    border-radius: 5px;
 }
 
 textarea{
@@ -29,6 +42,40 @@ table{
     margin-top: 50px;
 }
 
+tr{
+    height: 40px;
+}
+
+button{
+    width: 200px;
+    height: 50px;
+    margin: 50px 30px 0px;
+    background-color: #aaa;
+    border-left: solid 3px #888;
+    border-right: solid 5px #222;
+    border-top: solid 3px #888;
+    border-bottom: solid 5px #222;
+    color: #333;
+    font-size: 14px;
+    font-style: bold;
+    transition: 0.05s;
+}
+
+button:hover{
+    width: 200px;
+    height: 50px;
+    margin: 52px 28px -2px 32px;
+    background-color: #aaa;
+    border-left: solid 3px #333;
+    border-right: solid 5px #333;
+    border-top: solid 3px #333;
+    border-bottom: solid 5px #333;
+    color: #333;
+    font-size: 14px;
+    font-style: bold;
+    transition: 0.05s;
+}
+
 .add img{
-    margin: 30px;
+    margin: 50px;
 }
