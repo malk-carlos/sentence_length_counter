@@ -32,7 +32,6 @@ function copy(){
     var ctxt = document.getElementById("text");
     ctxt.select();
     document.execCommand("copy");
-    ctxt.selectedIndex = -1;
 }
 
 function reset(){
