@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #333;
+    color: white;
+}
+
+h1{
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+textarea{
+    resize: none;
+    width: 50vw;
+    height: 20vw;
+    text-align: left;
+    background-color: #00594C;
+    color: white;
+    border: solid 10px #8B4720;
+    border-bottom: groove 20px #8B4720;
+    font-size: 16px;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+}
+
+.add img{
+    margin: 30px;
+}

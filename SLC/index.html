@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="count.js"></script>
+    <title>文字数カウンター</title>
+</head>
+<body>
+    <h1>文字数カウンター</h1>
+    <textarea id="text"></textarea>
+    
+    <table>
+        <tr id="">
+            <td>文字数（スペースを含む）</td>
+            <td><input readonly type="text" size="5" id="words-sp" value="0"></td>
+        </tr>
+
+        <tr>
+            <td>文字数（スペースを除外）</td>
+            <td><input readonly type="text" size="5" id="words-ns" value="0"></td>
+        </tr>
+
+        <tr>
+            <td>行数</td>
+            <td><input readonly type="text" size="5" id="lines" value="0"></td>
+        </tr>
+    </table>    
+
+    <button onclick="count()">
+        文字数をカウント
+    </button>
+
+    <button onclick="copy()">
+        テキストエリア内をコピー
+    </button>
+
+    <button onclick="reset()">
+        リセット
+    </button>
+
+    <div class="add">
+        <a href="http://malk.main.jp/goolgle/" target="_blank"><img src="pictures/banner.png" width="30%"></a>
+    </div>
+</body>
+</html>
