@@ -14,13 +14,11 @@ function count(){
     }
     ;
 
-    ws = txt.replace(/\n/g, ""); 
-    ws = ws.length;
-    document.getElementById("words-sp").value = ws;
+    ws = txt.replace(/\n/g, "");
+    document.getElementById("words-sp").value = ws.length;
 
     wn = txt.replace(/\s|　/g, "");
-    wn = wn.length
-    document.getElementById("words-ns").value = wn;
+    document.getElementById("words-ns").value = wn.length;
 
     document.getElementById("lines").value = li;
 
