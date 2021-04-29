@@ -1,5 +1,5 @@
 function count(){
-	var txt, en, ws, wn, sp, li;
+	var txt, en, ws, wn, li;
 
     li = 0
 
@@ -11,8 +11,7 @@ function count(){
         li = 1
     } else {
         li = 0
-    }
-    ;
+    };
 
     ws = txt.replace(/\n/g, "");
     document.getElementById("words-sp").value = ws.length;
@@ -21,9 +20,6 @@ function count(){
     document.getElementById("words-ns").value = wn.length;
 
     document.getElementById("lines").value = li;
-
-    console.log(en, sp, ws, wn, li)
-
 }
 
 function copy(){
