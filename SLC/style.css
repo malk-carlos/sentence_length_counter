@@ -1,4 +1,4 @@
-*{
+html{
     margin: 0;
     text-align: center;
     vertical-align: middle;
@@ -23,6 +23,7 @@ h1:hover{
     color: #fff;
     border: groove 3px #8B4720;
     border-radius: 5px;
+    text-align: center;
 }
 
 textarea{
@@ -35,6 +36,7 @@ textarea{
     border: solid 10px #8B4720;
     border-bottom: groove 20px #8B4720;
     font-size: 16px;
+    
 }
 
 table{
@@ -47,7 +49,7 @@ tr{
     height: 40px;
 }
 
-button{
+.yamada{
     width: 200px;
     height: 50px;
     margin: 50px 30px 0px;
@@ -62,7 +64,7 @@ button{
     transition: 0.05s;
 }
 
-button:active{
+.yamada:active{
     width: 200px;
     height: 50px;
     margin: 52px 28px -2px 32px;
@@ -76,6 +78,8 @@ button:active{
     font-style: bold;
     transition: 0.05s;
 }
+
+
 
 .add img{
     margin: 50px;

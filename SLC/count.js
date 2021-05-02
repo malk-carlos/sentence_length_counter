@@ -26,6 +26,13 @@ function copy(){
     var ctxt = document.getElementById("text");
     ctxt.select();
     document.execCommand("copy");
+    swal({
+        title: "コピー完了",
+        icon: "success",
+        timer: 2000
+      });
+
+
 }
 
 function reset(){
