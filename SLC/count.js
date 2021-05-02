@@ -31,8 +31,6 @@ function copy(){
         icon: "success",
         timer: 2000
       });
-
-
 }
 
 function reset(){

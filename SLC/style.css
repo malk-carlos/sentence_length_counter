@@ -36,7 +36,6 @@ textarea{
     border: solid 10px #8B4720;
     border-bottom: groove 20px #8B4720;
     font-size: 16px;
-    
 }
 
 table{
@@ -78,8 +77,6 @@ tr{
     font-style: bold;
     transition: 0.05s;
 }
-
-
 
 .add img{
     margin: 50px;
