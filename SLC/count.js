@@ -30,7 +30,7 @@ function copy(){
         title: "コピー完了",
         icon: "success",
         timer: 2000
-      });
+    });
 }
 
 function reset(){

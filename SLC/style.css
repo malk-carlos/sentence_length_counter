@@ -48,7 +48,7 @@ tr{
     height: 40px;
 }
 
-.yamada{
+.copy{
     width: 200px;
     height: 50px;
     margin: 50px 30px 0px;
@@ -63,11 +63,10 @@ tr{
     transition: 0.05s;
 }
 
-.yamada:active{
+.copy:active{
     width: 200px;
     height: 50px;
-    margin: 52px 28px -2px 32px;
-    background-color: #aaa;
+    background-color: #888;
     border-left: solid 3px #333;
     border-right: solid 5px #333;
     border-top: solid 3px #333;
@@ -78,6 +77,35 @@ tr{
     transition: 0.05s;
 }
 
-.add img{
+.reset{
+    width: 200px;
+    height: 50px;
+    margin: 50px 30px 0px;
+    background-color: #aaa;
+    border-left: solid 3px #888;
+    border-right: solid 5px #222;
+    border-top: solid 3px #888;
+    border-bottom: solid 5px #222;
+    color: #333;
+    font-size: 14px;
+    font-style: bold;
+    transition: 0.05s;
+}
+
+.reset:active{
+    width: 200px;
+    height: 50px;
+    background-color: #888;
+    border-left: solid 3px #333;
+    border-right: solid 5px #333;
+    border-top: solid 3px #333;
+    border-bottom: solid 5px #333;
+    color: #333;
+    font-size: 14px;
+    font-style: bold;
+    transition: 0.05s;
+}
+
+.add{
     margin: 50px;
 }
