@@ -29,7 +29,7 @@ function copy(){
     swal({
         title: "コピー完了",
         icon: "success",
-        timer: 2000
+        timer: 1500
     });
 }
 
