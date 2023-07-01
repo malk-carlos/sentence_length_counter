@@ -1,10 +1,12 @@
 function count(){
 	var txt, en, ws, wn, li;
+    // en => enter改行文字
+    //
     
     li = 0
 
     //改行をカウント　テキストが1文字以上あれば改行数+1を行数として出力
-    //テキストのある行のみ（空白行は含まない）を行数としてカウントしたい 
+    //テキストのある行のみ（空白行は含まない）を行数としてカウント
     
     txt = document.getElementById("text").value;
     if (txt.match( /\n/g )){
