@@ -1,14 +1,9 @@
 function count(){
-	var txt, en, ws, wn, li;
-    // en => enter改行文字
-    //
+	let txt, en, ws, wn, li;
     
     li = 0
-
-    //改行をカウント　テキストが1文字以上あれば改行数+1を行数として出力
-    //テキストのある行のみ（空白行は含まない）を行数としてカウント
     
-    txt = document.getElementById("text").value;
+    txt = $("#text").val();
     if (txt.match( /\n/g )){
         en = (txt.match( /\n/g )).length
         li = en + 1
@@ -19,16 +14,16 @@ function count(){
     };
 
     ws = txt.replace(/\n/g, "");
-    document.getElementById("words-sp").value = ws.length;
+    $("#words-sp").val(ws.length);
 
     wn = txt.replace(/\s|　/g, "");
-    document.getElementById("words-ns").value = wn.length;
+    $("#words-ns").val(wn.length);
 
-    document.getElementById("lines").value = li;
+    $("#lines").val(li);
 }
 
 function copy(){
-    var ctxt = document.getElementById("text");
+    const ctxt = $("#text");
     ctxt.select();
     document.execCommand("copy");
     swal({
@@ -39,8 +34,8 @@ function copy(){
 }
 
 function reset(){
-    document.getElementById("words-sp").value = 0;
-    document.getElementById("words-ns").value = 0;
-    document.getElementById("lines").value = 0;
-    document.getElementById("text").value = null;
+    $("#words-sp").val(0);
+    $("#words-ns").val(0);
+    $("#lines").val(0);
+    $("#text").val(null);
 }
