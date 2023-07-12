@@ -85,3 +85,7 @@ button:active{
     font-size: 14px;
     font-style: bold;
 }
+
+footer a{
+    color: #fff;
+}
