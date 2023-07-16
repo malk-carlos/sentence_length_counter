@@ -4,39 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/948e77f9ec.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="./js/userAgent.js"></script>
     <script src="./js/count.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="./css/pc.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6893514653555478" crossorigin="anonymous"></script>
     <title>文字数カウンター</title>
 </head>
 <body>
+    <!-- <button id="setting" onclick="setting()"><i class="fa-solid fa-gear"></i></button> -->
+
     <h1>文字数カウンター</h1>
-    <textarea id="text" oninput="count()"></textarea>
+
+    <div id="main">
+        <div id="ta-wrap">
+            <textarea id="text" oninput="count()"></textarea>
+        </div>
+        <table>
+            <tr>
+                <td>文字数（スペースを含む）</td>
+                <td class="disp-td"><span id="words-sp" class="len-display">0</span></td>
+            </tr>
     
-    <table>
-        <tr>
-            <td>文字数（スペースを含む）</td>
-            <td><input disabled readonly type="text" size="5" id="words-sp" class="len-display" value="0"></td>
-        </tr>
+            <tr>
+                <td>文字数（スペースを除外）</td>
+                <td class="disp-td"><span id="words-ns" class="len-display">0</span></td>
+            </tr>
+    
+            <tr>
+                <td>行数</td>
+                <td class="disp-td"><span id="lines" class="len-display">0</span></td>
+            </tr>
+        </table>    
+    </div>
 
-        <tr>
-            <td>文字数（スペースを除外）</td>
-            <td><input disabled readonly type="text" size="5" id="words-ns" class="len-display" value="0"></td>
-        </tr>
-
-        <tr>
-            <td>行数</td>
-            <td><input disabled readonly type="text" size="5" id="lines" class="len-display" value="0" ></td>
-        </tr>
-    </table>
-
-    <button class="copy" onclick="copy()">
+    <button id="copy" onclick="copy()">
         テキストエリア内をコピー
     </button>
 
-    <button class="reset" onclick="reset()">
+    <button id="reset" onclick="reset()">
         リセット
     </button>
 

@@ -14,12 +14,12 @@ function count(){
     };
 
     ws = txt.replace(/\n/g, "");
-    $("#words-sp").val(ws.length);
+    $("#words-sp").text(ws.length);
 
     wn = txt.replace(/\s|　/g, "");
-    $("#words-ns").val(wn.length);
+    $("#words-ns").text(wn.length);
 
-    $("#lines").val(li);
+    $("#lines").text(li);
 }
 
 function copy(){
@@ -34,8 +34,8 @@ function copy(){
 }
 
 function reset(){
-    $("#words-sp").val(0);
-    $("#words-ns").val(0);
-    $("#lines").val(0);
+    $("#words-sp").text(0);
+    $("#words-ns").text(0);
+    $("#lines").text(0);
     $("#text").val(null);
 }
