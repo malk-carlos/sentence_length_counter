@@ -1,5 +1,9 @@
-html{
+*{
     margin: 0;
+}
+
+body{
+    position: relative;
     text-align: center;
     vertical-align: middle;
     background-color: #333;
@@ -7,8 +11,10 @@ html{
 }
 
 h1{
+    display: inline-block;
+    text-align: center;
     font-size: 40px;
-    margin: 50px auto 30px;
+    margin-top: 30px;
     padding: 30px 0;
     transition: 0.3s;
     width: 400px;
@@ -19,19 +25,24 @@ h1:hover{
     transition: 0.3s;
 }
 
-.len-display{
-    background-color: #00594c;
-    color: #fff;
-    border: groove 3px #8B4720;
-    border-radius: 5px;
-    text-align: center;
+#main{
+    margin-top: 50px;
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+#ta-wrap {
+    flex: 6;
+    height: 100%;
 }
 
 textarea{
     resize: none;
-    width: 50vw;
-    height: 20vw;
-    text-align: left;
+    width: 100%;
+    height: 90%;
     background-color: #00594C;
     color: white;
     border: solid 10px #8B4720;
@@ -47,14 +58,29 @@ textarea:hover{
 table{
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    border: solid 10px #0000;
+    flex: 4;
 }
 
 tr{
     height: 40px;
 }
 
-button{
+.disp-td{
+    width: 3em;
+}
+
+.len-display{
+    display: block;
+    width: 100%;
+    background-color: #00594c;
+    color: #fff;
+    border: groove 3px #8B4720;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#copy,#reset{
     width: 200px;
     height: 50px;
     margin: 50px 30px 0px;
@@ -69,11 +95,11 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+#copy:hover,#reset:hover{
     background-color: #888;
 }
 
-button:active{
+#copy:active,#reset:active{
     width: 200px;
     height: 50px;
     background-color: #888;
@@ -84,6 +110,23 @@ button:active{
     color: #333;
     font-size: 14px;
     font-style: bold;
+}
+
+#setting{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff3;
+}
+
+#setting>i{
+    color: #333;
+}
+
+footer {
+    margin-top: 1em;
 }
 
 footer a{
