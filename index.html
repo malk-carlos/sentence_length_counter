@@ -20,7 +20,7 @@
 
     <div id="main">
         <div id="ta-wrap">
-            <textarea id="text" oninput="count()"></textarea>
+            <textarea id="text" oninput="count('countAll')" onmousedown="checkMousedown()" onkeyup="checkKeyup(event)"></textarea>
         </div>
         <table>
             <tr>
@@ -40,6 +40,7 @@
         </table>    
     </div>
 
+    <p id="log"></p>
     <button id="copy" onclick="copy()">
         テキストエリア内をコピー
     </button>
