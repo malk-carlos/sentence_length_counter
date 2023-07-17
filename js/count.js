@@ -1,5 +1,5 @@
 function count(mode,str){
-	let txt, en, ws, wn, li;
+	let txt, ret, char, noSpace, li, noEmpty;
     li = 0;
 
     if (mode==='countAll') {
@@ -9,23 +9,29 @@ function count(mode,str){
     }
 
     if (txt.match( /\n/g )){
-        en = (txt.match( /\n/g )).length;
-        li = en + 1;
+        ret = (txt.match( /\n/g )).length;
+        li = ret + 1;
     } else if (txt.match( /\S/g )){
         li = 1;
     } else {
         li = 0;
     };
+    const lines = txt.split(/\n/);  // テキストを改行で分割して配列に格納
+    const nonEmptyLines = lines.filter(function(line) {
+    return line.trim() !== '';  // 空白行以外の行のみを抽出
+    });
+    noEmpty = nonEmptyLines.length;  // 空白行を除外した行数を取得
     
-    ws = txt.replace(/\n/g, "");
-    wn = txt.replace(/\s|　/g, "");
+    char = txt.replace(/\n/g, "");
+    noSpace = txt.replace(/\s|　/g, "");
 
-    if (mode==='countSelection' && ws==0 && wn==0 && li==0){
+    if (mode==='countSelection' && char==0 && noSpace==0 && li==0){
         count("countAll");
     } else {
-        $("#words-sp").text(ws.length);
-        $("#words-ns").text(wn.length);
+        $("#char").text(char.length);
+        $("#char-noSpace").text(noSpace.length);
         $("#lines").text(li);
+        $("#lines-noEmpty").text(noEmpty);
     }
 }
 
@@ -56,8 +62,9 @@ function copy(){
 }
 
 function reset(){
-    $("#words-sp").text(0);
-    $("#words-ns").text(0);
+    $("#char").text(0);
+    $("#char-noSpace").text(0);
     $("#lines").text(0);
+    $("#lines-noEmpty").text(0);
     $("#text").val(null);
 }
