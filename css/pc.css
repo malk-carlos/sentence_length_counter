@@ -49,11 +49,13 @@ textarea{
     border: solid 10px #8B4720;
     border-bottom: groove 20px #8B4720;
     font-size: 16px;
+    border-radius: 20px;
+    transition: .2s;
 }
 
 textarea:hover{
-    border: solid 10px #ab6740;
-    border-bottom: groove 20px #ab6740;
+    border-radius: 0;
+    transition: .2s;
 }
 
 table{
@@ -150,6 +152,22 @@ tr{
     background-color: #222;
     width: 50vw;
     height: 100vh;
+    text-align: left;
+}
+
+#setMenu label{
+    display: inline-block;
+    width: 50%;
+}
+
+#setMenu div{
+    margin: 5%;
+    margin-left: 30px;
+}
+
+#setMenu button{
+    display: block;
+    margin: 30px;
 }
 
 @keyframes setting{

@@ -11,6 +11,32 @@ function closeSetting() {
     setTimeout(()=>{$("#setMenu").css({"display":"none"})},400)
 }
 
-function changeColor() {
-    
+function changeColor(){
+    const backGround = $("body")
+    const fonts = $("h1,.capt-td")
+    const textarea = $("textarea,.len-display")
+    const btn = $("#copy,#reset")
+
+    backGround.css({"background-color":`${$("#backGroundColor").val()}`})
+    fonts.css({"color":`${$("#fontsColor").val()}`})
+    textarea.css({
+        "color":`${$("#textareaColor").val()}`,
+        "background-color":`${$("#textareaBack").val()}`,
+        "border-color":`${$("#textareaBorder").val()}`
+    })
+    btn.css({
+        "color":`${$("#btnColor").val()}`,
+        "background-color":`${$("#btnBack").val()}`
+    })
+}
+
+function resetColor(){
+    $("#backGroundColor").val("#333333")
+    $("#fontsColor").val("#ffffff")
+    $("#textareaBack").val("#00594c")
+    $("#textareaBorder").val("#8B4720")
+    $("#textareaColor").val("#ffffff")
+    $("#btnBack").val("#aaaaaa")
+    $("#btnColor").val("#333333")
+    changeColor()
 }

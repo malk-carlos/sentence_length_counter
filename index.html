@@ -15,7 +15,7 @@
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6893514653555478" crossorigin="anonymous"></script>
     <title>文字数カウンター</title>
 </head>
-<body>
+<body onload="changeColor()">
     <h1>文字数カウンター</h1>
 
     <div id="main">
@@ -24,19 +24,19 @@
         </div>
         <table>
             <tr>
-                <td>文字数（スペースを含む）</td>
+                <td class="capt-td">文字数（スペースを含む）</td>
                 <td class="disp-td"><span id="char" class="len-display">0</span></td>
             </tr>
             <tr>
-                <td>文字数（スペースを除外）</td>
+                <td class="capt-td">文字数（スペースを除外）</td>
                 <td class="disp-td"><span id="char-noSpace" class="len-display">0</span></td>
             </tr>
             <tr>
-                <td>行数</td>
+                <td class="capt-td">行数</td>
                 <td class="disp-td"><span id="lines" class="len-display">0</span></td>
             </tr>
             <tr>
-                <td>行数（空白行を除外）</td>
+                <td class="capt-td">行数（空白行を除外）</td>
                 <td class="disp-td"><span id="lines-noEmpty" class="len-display">0</span></td>
             </tr>
         </table>    
@@ -75,7 +75,7 @@
         </label>
         <label id="wrapTBD" class="setMenuWrap" for="textareaBorder">
             <div>
-                <span>テキストエリア背景色</span>
+                <span>テキストエリア枠線色</span>
                 <input type="color" id="textareaBorder" onchange="changeColor()" value="#8B4720">
             </div>
         </label>
@@ -97,6 +97,7 @@
                 <input type="color" id="btnColor" onchange="changeColor()" value="#333333">
             </div>
         </label>
+        <button onclick="resetColor()">色を既定に戻す</button>
     </div>
 
     <footer>

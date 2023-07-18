@@ -99,7 +99,66 @@ tr{
 }
 
 #setting>i{
-    color: #333;
+    color: #fff;
+}
+
+#closeSetting{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #fff3;
+    z-index: 5;
+}
+
+#closeSetting>i{
+    color: #fff;
+}
+
+#setMenu{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #222;
+    width: 100vw;
+    height: 75vh;
+    text-align: left;
+}
+
+#setMenu label{
+    display: inline-block;
+    width: 80%;
+}
+
+#setMenu div{
+    margin: 5%;
+    margin-left: 30px;
+}
+
+#setMenu button{
+    display: block;
+    margin: 30px;
+}
+
+@keyframes setting{
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes closeSetting{
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
 }
 
 footer {
