@@ -9,14 +9,13 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="./js/userAgent.js"></script>
     <script src="./js/count.js"></script>
+    <script src="./js/color.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="./css/pc.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6893514653555478" crossorigin="anonymous"></script>
     <title>文字数カウンター</title>
 </head>
 <body>
-    <!-- <button id="setting" onclick="setting()"><i class="fa-solid fa-gear"></i></button> -->
-
     <h1>文字数カウンター</h1>
 
     <div id="main">
@@ -51,6 +50,54 @@
     <button id="reset" onclick="reset()">
         リセット
     </button>
+
+    
+    <button id="setting" onclick="setting()"><i class="fa-solid fa-gear"></i></button>
+    <button id="closeSetting" onclick="closeSetting()"><i class="fa-solid fa-xmark"></i></button>
+    <div id="setMenu">
+        <label id="wrapBGC" class="setMenuWrap" for="backGroundColor">
+            <div>
+                <span>ページ背景色</span>
+                <input type="color" id="backGroundColor" onchange="changeColor()" value="#333333">
+            </div>
+        </label>
+        <label id="wrapFTC" class="setMenuWrap" for="fontsColor">
+            <div>
+                <span>文字色</span>
+                <input type="color" id="fontsColor" onchange="changeColor()" value="#ffffff">
+            </div>
+        </label>
+        <label id="wrapTAB" class="setMenuWrap" for="textareaBack">
+            <div>
+                <span>テキストエリア背景色</span>
+                <input type="color" id="textareaBack" onchange="changeColor()" value="#00594C">
+            </div>
+        </label>
+        <label id="wrapTBD" class="setMenuWrap" for="textareaBorder">
+            <div>
+                <span>テキストエリア背景色</span>
+                <input type="color" id="textareaBorder" onchange="changeColor()" value="#8B4720">
+            </div>
+        </label>
+        <label id="wrapTAC" class="setMenuWrap" for="textareaColor">
+            <div>
+                <span>テキストエリア文字色</span>
+                <input type="color" id="textareaColor" onchange="changeColor()" value="#ffffff">
+            </div>
+        </label>
+        <label id="wrapBTB" class="setMenuWrap" for="btnBack">
+            <div>
+                <span>ボタン背景色</span>
+                <input type="color" id="btnBack" onchange="changeColor()" value="#aaaaaa">
+            </div>
+        </label>
+        <label id="wrapBTC" class="setMenuWrap" for="btnColor">
+            <div>
+                <span>ボタン文字色</span>
+                <input type="color" id="btnColor" onchange="changeColor()" value="#333333">
+            </div>
+        </label>
+    </div>
 
     <footer>
         <p>&copy;2022 <a href="https://github.com/malk-carlos" target="_blank" rel="noopener noreferrer">Malk</a>/Nagito All rights reserved.</p>
